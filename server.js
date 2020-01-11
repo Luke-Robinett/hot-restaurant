@@ -27,6 +27,32 @@ app.get("/reserve", function(req, res) {
   res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
+// Temp data
+const tables = [
+  {
+    tableNumber: 1,
+    id: 1000,
+    name: "Person",
+    email: "person@place.com",
+    phoneNumber: "5032334567"
+  },
+  {
+    tableNumber: 2,
+    id: 1050,
+    name: "Person2",
+    email: "person2@place.com",
+    phoneNumber: "5032334567"
+  }
+];
+
+// API paths
+app.get("/api/tables", function(req, res) {
+  return res.json(tables);
+});
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
