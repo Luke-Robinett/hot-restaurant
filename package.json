@@ -1,0 +1,22 @@
+{
+  "name": "hot-restaurant",
+  "version": "1.0.0",
+  "description": "Hot Restaurant",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luke-Robinett/hot-restaurant.git"
+  },
+  "author": "Luke Robinett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luke-Robinett/hot-restaurant/issues"
+  },
+  "homepage": "https://github.com/Luke-Robinett/hot-restaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
