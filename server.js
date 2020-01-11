@@ -45,12 +45,22 @@ const tables = [
   }
 ];
 
+const reservations = [
+  {
+    name: "Joe",
+    phone: "2345671234",
+    email: "joe@eat.com",
+    uniqueId: 1234
+  }
+];
+
 // API paths
 app.get("/api/tables", function(req, res) {
   return res.json(tables);
 });
-app.get("/reserve", function(req, res) {
-  res.sendFile(path.join(__dirname, "reserve.html"));
+
+app.get("/api/reserve", function(req, res) {
+  return res.json(reservations);
 });
 
 // Starts the server to begin listening
