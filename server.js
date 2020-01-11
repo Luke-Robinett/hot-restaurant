@@ -1,7 +1,8 @@
 // Dependencies
 // =============================================================
-var express = require("express");
-var path = require("path");
+const express = require("express");
+const path = require("path");
+const Reservation = require("./lib/Reservation");
 
 // Sets up the Express App
 // =============================================================
@@ -59,8 +60,8 @@ app.get("/api/tables", function(req, res) {
   return res.json(tables);
 });
 
-app.get("/api/reserve", function(req, res) {
-  return res.json(reservations);
+app.post("/api/reserve", function(req, res) {
+  var newReservation = new Reservation(res.body);
 });
 
 // Starts the server to begin listening
