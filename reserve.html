@@ -49,7 +49,8 @@
         <div class="text-center">
           <a href="/tables">
             <button class="btn btn-lg btn-primary">
-              <span class="fa fa-list-alt"></span>
+              <span class="fa fa-list-alt">
+              </span>
               View Tables
             </button>
           </a>
@@ -67,18 +68,18 @@
               Table Reservation
             </div>
             <div class="card-body">
-              <form role="form">
+              <form action="/api/reserve" method="POST" role="form">
                 <div class="form-group">
                   <label for="reserve-name">Name</label>
-                  <input type="text" class="form-control" id="name" />
+                  <input type="text" class="form-control" name="name" id="name" />
                 </div>
                 <div class="form-group">
                   <label for="reserve-phone">Phone Number</label>
-                  <input type="text" class="form-control" id="phone" />
+                  <input type="text" class="form-control" name="phone" id="phone" />
                 </div>
                 <div class="form-group">
                   <label for="reserve-email">Email</label>
-                  <input type="text" class="form-control" id="email" />
+                  <input type="text" class="form-control" name="email" id="email" />
 
                 </div>
                 <div class="form-group">
@@ -86,6 +87,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="unique-id"
                     id="unique-id"
                   />
                 </div>
@@ -107,7 +109,7 @@
         </div>
       </footer>
     </div>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $(".submit").on("click", function(event) {
         event.preventDefault();
         var newReservation = {
@@ -125,10 +127,11 @@
             .trim()
         };
       });
-      $.post("/api/tables", newReservation)
+      $.post("/api/reserve", newReservation)
         .then(function(data) {
-          console.log("reservation.html", data);
+          console.log("reserve.html", data);
         });
-    </script>
+    </script> -->
+    <script src="server.js"></script>
   </body>
 </html>
